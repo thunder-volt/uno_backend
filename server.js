@@ -58,6 +58,10 @@ io.on('connection', socket => {
     })
 })
 
+app.get('/', (req, resp) => {
+    return resp.send("hellow");
+})
+
 //serve static assets in production
 // if (process.env.NODE_ENV === 'production') {
 //     //set static folder
