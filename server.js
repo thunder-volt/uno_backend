@@ -59,7 +59,7 @@ io.on('connection', socket => {
 })
 
 app.get('/', (req, resp) => {
-    return resp.send("hellow");
+    resp.sendStatus(200)
 })
 
 //serve static assets in production
@@ -74,3 +74,5 @@ app.get('/', (req, resp) => {
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 })
+
+module.exports = app;
